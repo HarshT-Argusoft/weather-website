@@ -17,14 +17,10 @@ weatherForm.addEventListener('submit',(e) => {
     .then((response) => {
             response.json().then((data) => {
                 if(data.error){
-                    // console.log(data.error)
                     messageOne.textContent = data.error
                 }else{
-                    // console.log(data.location)
                     messageOne.textContent = 'Location: ' + data.location
-                    // console.log(data.temperature)
                     messageTwo.textContent = 'Temperature: ' + data.temperature
-                    // console.log(data.feelslike)
                     messageThree.textContent = 'Feelslike: ' + data.feelslike
                 }
             })
